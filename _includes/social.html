@@ -34,7 +34,7 @@
     <a
       class="black-link"
       href="https://github.com/{{ social.github | cgi_escape | escape }}"
-    > [Github]</a
+    > [GitHub]</a
     >
   </li>
   {%- endif -%} {%- if social.instagram -%}
@@ -54,7 +54,7 @@
       href="https://www.linkedin.com/in/{{
         social.linkedin | cgi_escape | escape
       }}"
-      >[Linkedin]</a
+      >[LinkedIn]</a
     >
   </li>
   {%- endif -%} {%- if social.pinterest -%}
@@ -76,7 +76,7 @@
       href="https://{{ mst.instance | cgi_escape | escape }}/@{{
         mst.username
       }}"
-      >[MST]</a
+      >[Mastodon]</a
     >
   </li>
   {%- endif -%}{%- endfor -%} {%- if social.twitter -%}
