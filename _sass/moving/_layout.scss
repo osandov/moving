@@ -371,3 +371,17 @@
     margin-top: 2rem;
   }
 }
+
+/**
+ * Tags
+ */
+
+.tag-post-meta {
+  @extend .post-meta;
+  min-width: 120px;
+}
+
+.tag-link {
+  @extend .black-link;
+  color: lighten($text-color, 25%);
+}

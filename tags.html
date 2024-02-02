@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<head>
+  <title>Tags</title>
+</head>
+{%- include back-button.html -%}
+<h1 class="post-title p-name">Tags</h1>
+<ul class="post-list">
+  {%- assign sorted_tags = site.tags | sort -%}
+  {%- for tag in sorted_tags -%}
+    <h2 id="{{ tag[0] | uri_escape }}" class="post-year">{{ tag[0] }}</h2>
+    <ul>
+      {%- for post in tag[1] -%}
+	<li>
+	  <span class="tag-post-meta">{{ post.date | date: "%b %Y" }}</span>
+	  <a class="black-link post-link-layout" href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+      {%- endfor -%}
+    </ul>
+  {%- endfor -%}
+</ul>
