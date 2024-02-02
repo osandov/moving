@@ -14,11 +14,7 @@ layout: default
     <title>{{ page.title }}</title>
   </head>
   <header class="post-header">
-    <div class="post-back">
-      <a class="black-link" href="{{ site.url | relative_url }}">
-        ← {{ site.moving.back_to }}
-      </a>
-    </div>
+    {%- include back-button.html -%}
 
     <h1 class="post-title p-name" itemprop="name headline">
       {{ page.title | escape }}
