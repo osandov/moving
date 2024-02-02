@@ -168,6 +168,33 @@
   @include relative-font-size(1);
 }
 
+.home-title-link-list {
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+  @include relative-font-size(1);
+  li {
+    float: left;
+    a {
+      padding-right: $spacing-unit / 5;
+
+      color: $text-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $text-color;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 500px) {
+        @include relative-font-size(0.8);
+      }
+
+      @include relative-font-size(1);
+    }
+  }
+}
+
 .post-list {
   margin-top: 2.5rem;
   margin-left: 0;

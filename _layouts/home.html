@@ -7,8 +7,15 @@ layout: default
       <title>{{ site.title }}</title>
   </head>
   <div class="home-title">
-    <p class="home-heading">{{ site.title }}</p>
-    <p class="home-sub-heading">{{- site.description | escape -}}</p>
+    <div class="home-heading">{{ site.title }}</div>
+    <div class="home-sub-heading">{{- site.description | escape -}}</div>
+    <div>
+      <ul class="home-title-link-list">
+	<li>
+	  <a href="/about.html">[About]</a>
+	</li>
+      </ul>
+    </div>
   </div>
 
   {%- if site.posts.size > 0 -%}
