@@ -9,6 +9,10 @@
       >[Dribbble]</a
     >
   </li>
+  {%- endif -%} {%- if site.email -%}
+  <li>
+    <a class="black-link" href="mailto:{{ site.email }}">[Email]</a>
+  </li>
   {%- endif -%} {%- if social.facebook -%}
   <li>
     <a
