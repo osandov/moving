@@ -137,4 +137,9 @@
     <a class="black-link" href="{{ 'feed.xml' | relative_url }}">[RSS]</a>
   </li>
   {%- endif -%}
+  {%- if site.tags.size > 0 -%}
+  <li>
+    <a class="black-link" href="/tags.html">[Tags]</a>
+  </li>
+  {%- endif -%}
 </ul>

@@ -8,18 +8,23 @@ layout: default
   </head>
   <div class="home-title">
     <div class="home-heading">{{ site.title }}</div>
-    <div class="home-sub-heading">{{- site.description | escape -}}</div>
-    <div>
-      <ul class="home-title-link-list">
-	<li>
-	  <a href="/about.html">[About]</a>
-	</li>
-	{%- if site.tags.size > 0 -%}
-	<li>
-	  <a href="/tags.html">[Tags]</a>
-	</li>
-	{%- endif -%}
-      </ul>
+  </div>
+
+  <div class="home-about">
+    <div class="about-header">
+      {%- if site.moving.avatar_url -%}
+      <img class="about-avatar" src="{{ site.moving.avatar_url }}" />
+      {%- endif -%}
+      <div class="about-info">
+        <p class="about-description">
+          {{- site.description | escape -}}
+        </p>
+        {%- include social.html -%}
+      </div>
+    </div>
+
+    <div class="about-content e-content" itemprop="articleBody">
+      {{ content }}
     </div>
   </div>
 
