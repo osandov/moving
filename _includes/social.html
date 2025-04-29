@@ -71,7 +71,19 @@
       >[Pinterest]</a
     >
   </li>
-  {%- endif -%} {%- for mst in social.mastodon -%}{%- if mst.username and
+  {%- endif -%} {%- for fedi in social.fediverse -%}{%- if fedi.username and
+  fedi.instance -%}
+  <li>
+    <a
+      class="black-link"
+      rel="me"
+      href="https://{{ fedi.instance | cgi_escape | escape }}/@{{
+        fedi.username
+      }}"
+      >[Fediverse]</a
+    >
+  </li>
+  {%- endif -%}{%- endfor -%} {%- for mst in social.mastodon -%}{%- if mst.username and
   mst.instance -%}
   <li>
     <a
